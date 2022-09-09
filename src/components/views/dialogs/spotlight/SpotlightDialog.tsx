@@ -800,11 +800,6 @@ const SpotlightDialog: React.FC<IProps> = ({ initialText = "", initialFilter = n
                                     onChange={setShowSpaces}
                                 />
                             </> }
-                            <NetworkDropdown
-                                protocols={protocols}
-                                config={config ?? null}
-                                setConfig={setConfig}
-                            />
                         </div>
                     </div>
                     <div> { (showRooms || showSpaces)

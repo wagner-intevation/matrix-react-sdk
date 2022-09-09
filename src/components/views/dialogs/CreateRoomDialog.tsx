@@ -358,20 +358,6 @@ export default class CreateRoomDialog extends React.Component<IProps, IState> {
                         { publicPrivateLabel }
                         { e2eeSection }
                         { aliasField }
-                        <details onToggle={this.onDetailsToggled} className="mx_CreateRoomDialog_details">
-                            <summary className="mx_CreateRoomDialog_details_summary">
-                                { this.state.detailsOpen ? _t('Hide advanced') : _t('Show advanced') }
-                            </summary>
-                            <LabelledToggleSwitch
-                                label={_t(
-                                    "Block anyone not part of %(serverName)s from ever joining this room.",
-                                    { serverName: MatrixClientPeg.getHomeserverName() },
-                                )}
-                                onChange={this.onNoFederateChange}
-                                value={this.state.noFederate}
-                            />
-                            <p>{ federateLabel }</p>
-                        </details>
                     </div>
                 </form>
                 <DialogButtons primaryButton={isVideoRoom ? _t('Create video room') : _t('Create room')}

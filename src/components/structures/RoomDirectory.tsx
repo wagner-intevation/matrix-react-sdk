@@ -516,11 +516,6 @@ export default class RoomDirectory extends React.Component<IProps, IState> {
                     showJoinButton={showJoinButton}
                     initialText={this.props.initialText}
                 />
-                <NetworkDropdown
-                    protocols={this.protocols}
-                    config={this.state.serverConfig}
-                    setConfig={this.onOptionChange}
-                />
             </div>;
         }
         const explanation =

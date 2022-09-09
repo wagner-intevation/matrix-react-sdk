@@ -641,12 +641,6 @@ export default class Registration extends React.Component<IProps, IState> {
                 <div className="mx_Register_mainContent">
                     <AuthHeaderDisplay
                         title={_t('Create account')}
-                        serverPicker={<ServerPicker
-                            title={_t("Host account on")}
-                            dialogTitle={_t("Decide where your account is hosted")}
-                            serverConfig={this.props.serverConfig}
-                            onServerConfigChange={this.state.doingUIAuth ? undefined : this.props.onServerConfigChange}
-                        />}
                     >
                         { errorText }
                         { serverDeadSection }

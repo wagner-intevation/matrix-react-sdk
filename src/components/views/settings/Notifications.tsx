@@ -677,7 +677,6 @@ export default class Notifications extends React.PureComponent<IProps, IState> {
             { this.renderCategory(RuleClass.VectorGlobal) }
             { this.renderCategory(RuleClass.VectorMentions) }
             { this.renderCategory(RuleClass.VectorOther) }
-            { this.renderTargets() }
         </div>;
     }
 }

@@ -327,18 +327,9 @@ export default class GeneralUserSettingsTab extends React.Component<IProps, ISta
                     emails={this.state.emails}
                     onEmailsChange={this.onEmailsChange}
                 />;
-            const msisdns = this.state.loading3pids
-                ? <Spinner />
-                : <AccountPhoneNumbers
-                    msisdns={this.state.msisdns}
-                    onMsisdnsChange={this.onMsisdnsChange}
-                />;
             threepidSection = <div>
                 <span className="mx_SettingsTab_subheading">{ _t("Email addresses") }</span>
                 { emails }
-
-                <span className="mx_SettingsTab_subheading">{ _t("Phone numbers") }</span>
-                { msisdns }
             </div>;
         } else if (this.state.serverSupportsSeparateAddAndBind === null) {
             threepidSection = <Spinner />;
@@ -419,14 +410,10 @@ export default class GeneralUserSettingsTab extends React.Component<IProps, ISta
         }
 
         const emails = this.state.loading3pids ? <Spinner /> : <DiscoveryEmailAddresses emails={this.state.emails} />;
-        const msisdns = this.state.loading3pids ? <Spinner /> : <DiscoveryPhoneNumbers msisdns={this.state.msisdns} />;
 
         const threepidSection = this.state.haveIdServer ? <div className='mx_GeneralUserSettingsTab_discovery'>
             <span className="mx_SettingsTab_subheading">{ _t("Email addresses") }</span>
             { emails }
-
-            <span className="mx_SettingsTab_subheading">{ _t("Phone numbers") }</span>
-            { msisdns }
         </div> : null;
 
         return (
@@ -501,8 +488,6 @@ export default class GeneralUserSettingsTab extends React.Component<IProps, ISta
                 { this.renderAccountSection() }
                 { this.renderLanguageSection() }
                 { supportsMultiLanguageSpellCheck ? this.renderSpellCheckSection() : null }
-                { discoverySection }
-                { this.renderIntegrationManagerSection() /* Has its own title */ }
                 { accountManagementSection }
             </div>
         );
