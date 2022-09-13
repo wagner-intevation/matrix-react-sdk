@@ -83,7 +83,6 @@ export function UserOnboardingHeader({ useCase }: Props) {
             <div className="mx_UserOnboardingHeader_content">
                 <Heading size="h1">
                     { title }
-                    <span className="mx_UserOnboardingHeader_dot">.</span>
                 </Heading>
                 <p>
                     { description }
