@@ -62,7 +62,7 @@ export function UserOnboardingHeader({ useCase }: Props) {
             title = _t("Community ownership");
             description = _t("Keep ownership and control of community discussion.\n" +
                 "Scale to support millions, with powerful moderation and interoperability.");
-            image = require("../../../../res/img/user-onboarding/CommunityMessaging.png");
+            image = require("../../../../res/img/custom/fez-luftbild.jpg");
             actionLabel = _t("Find your people");
             break;
         default:
